@@ -1,5 +1,6 @@
-package user
+package userConfig
 
 var BlackList = map[int64]string{
-	1434: "",
+
+	1001: "",
 }
