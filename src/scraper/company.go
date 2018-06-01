@@ -17,6 +17,9 @@ type Company struct {
 	OperatingProfitRatio        float64 // average of four quarter
 	EPS                         []EPS_T
 	PERatio                     float64 // last year
+	DeductCashPERatio           float64
+	CashPerShare                float64
+	Shares                      int64
 	ShareCapital                int64
 }
 
