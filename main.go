@@ -22,7 +22,7 @@ func runAllCompany() {
 
 	// fliter black list
 	for id, value := range scraper.Config.Parser.ParseCompanyList() {
-		if _, ok := userConfig.BlackList[id]; !ok {
+		if userConfig.FilterCompany(id) {
 			fmt.Println(id, value)
 			runCompany(id)
 		}

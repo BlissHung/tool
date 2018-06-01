@@ -16,6 +16,8 @@ type Company struct {
 	ForeignInvestorHoldingRatio float64 // latest
 	OperatingProfitRatio        float64 // average of four quarter
 	EPS                         []EPS_T
+	PERatio                     float64 // last year
+	ShareCapital                int64
 }
 
 func (c *Company) Init(id int64) {
@@ -42,5 +44,7 @@ func (c Company) String() string {
 		fmt.Sprintf("Supervisor Shareholding Ratio:%v%%\n", c.SupervisorHoldingRatio) +
 		fmt.Sprintf("Foreign Investor Ratio:%v%%\n", c.ForeignInvestorHoldingRatio) +
 		fmt.Sprintf("(Operating Profit)/(Profit) Ratio:%v%%\n", c.OperatingProfitRatio) +
-		fmt.Sprintf("EPS:%v", c.EPS)
+		fmt.Sprintf("EPS:%v", c.EPS) +
+		fmt.Sprintf("Share Capital:%v", c.ShareCapital) +
+		fmt.Sprintf("P/E Ratio (last year):%v", c.PERatio)
 }

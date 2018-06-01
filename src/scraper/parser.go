@@ -34,7 +34,7 @@ type TaiwanBankParser struct{}
 func (p *TaiwanBankParser) ParseCompanyList() map[int64]string {
 
 	Ret := make(map[int64]string)
-	URL := "http://www.twse.com.tw/exchangeReport/BWIBBU_d?response=html&date=20180524&selectType=ALL"
+	URL := "http://www.twse.com.tw/exchangeReport/BWIBBU_d?response=html&date=20180531&selectType=ALL"
 	c := colly.NewCollector()
 	c.UserAgent = FakeUserAgent
 
